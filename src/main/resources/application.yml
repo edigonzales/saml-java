@@ -1,8 +1,8 @@
 idp:
-    appId: ${APP_ID}
-    entityId: ${ENTITY_ID}
+    appId: ${APP_ID:fubar}
+    entityId: ${ENTITY_ID:ch:so:agi:avgbs:ssocircle:sp}
     postLogoutURL: ${POST_LOGOUT_URL:#{'/'}}
-    metadataURL: ${IDP_METADATA_URL}
+    metadataURL: ${IDP_METADATA_URL:https://idp.ssocircle.com/meta-idp.xml}
 
 server:
     port: 8443
@@ -13,4 +13,6 @@ server:
 spring:
     main:
         bannerMode: 'OFF'
+    thymeleaf:
+        cache: false
 
